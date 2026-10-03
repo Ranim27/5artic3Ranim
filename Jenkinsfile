@@ -12,7 +12,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('sonarqube') {
+                withSonarQubeEnv('sq1') {
                     dir('backend') {
                         sh 'mvn sonar:sonar -Dsonar.projectKey=gestion-projets'
                     }
